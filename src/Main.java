@@ -20,22 +20,27 @@ public class Main {
         while((radek = br.readLine()) != null)
         {
         	
-        	String[] slova = radek.split("\\s+");
+        	if(radek.equals("") == false) {
+
+        	String[] slova = radek.split("\\ ");
         	pocetSlov += slova.length;
         	
         	for(int a=0; a<radek.length(); a++) {
-        		if(radek.charAt(a)==' ') {
+        		
+        		if(radek.charAt(a)== ' ') {
         			pocetMezer++;
+        			}
         		}
+        	
         	}
-         
         }
         
+       
         System.out.println("Počet slov = " +pocetSlov);
         System.out.println("Počet mezer = " +pocetMezer);
-          
-     
-       
-	}
 
+   	}
+  
 }
+
+
